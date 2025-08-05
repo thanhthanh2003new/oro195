@@ -8,7 +8,7 @@ const http = require('http');
 
 const PORT = process.env.PORT || 3000;
 // Lấy URL của app từ Render dashboard
-const APP_URL = 'https://oro-32z7.onrender.com';
+const APP_URL = 'https://oro195.onrender.com';
 
 // Ping mỗi 10 phút để không sleep
 setInterval(async () => {
@@ -18,7 +18,7 @@ setInterval(async () => {
     } catch (error) {
         console.log('❌ Ping failed:', error.message);
     }
-}, 10 * 60 * 1000); // 10 phút
+}, 5 * 60 * 1000); // 10 phút
 // Tạo HTTP server đơn giản
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
